@@ -20,6 +20,11 @@ code lives elsewhere and is not public.
 Every installer is signed by **The Lilybank Agency Ltd** — Windows will show
 that name rather than "unknown publisher".
 
+GitHub adds **Source code (zip)** and **Source code (tar.gz)** to every release
+on every repository, and there is no way to turn them off. On this one they
+contain what this repository contains — this page and the changelog. The app's
+source is not here and is not public.
+
 ## Stable and beta
 
 Releases marked **Pre-release** are beta builds, and installed copies only see
