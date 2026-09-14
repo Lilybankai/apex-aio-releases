@@ -2,7 +2,70 @@
 
 <!-- Unreleased — move under the next version heading when it is cut. The
      parser only reads "## x.y.z" headings, so nothing below is shown in the
-     app until it is renamed. -->
+     app until it is renamed.
+
+### Added
+
+- **The Fuel tab plans on measured pit stops.** The refuelling rate it used was
+  an estimate — and it was about 60% too fast. Every clean fuel-only race stop
+  the league has driven has now been measured: 1.54 L/s for LMGT3 across six
+  circuits, 1.59 L/s for LMP2 across four. A full energy fill takes 77 seconds,
+  not the 49 the old figure claimed, and over a four-hour race that is a lap.
+  Every number in the pit box now says where it came from — measured from the
+  shared data, typed in by you, or still an estimate and why.
+
+- **The pit wall says what a stop costs, not just that you need one.** The Team
+  tab's plan to the flag prices every stop still to come — the lane, the fuel
+  going in, the tyres if they are due — shows the time you have left to spend
+  standing still, and puts a number of seconds on what dropping a stop would be
+  worth. The fuel plan itself is untouched by any of it.
+
+- **The race planner behind both.** How many stops, on which laps, and what each
+  one costs, including the part most people miss: a full tank is slower than an
+  empty one, so an extra stop sometimes pays for itself. Where the data cannot
+  support a judgement it says so rather than guessing.
+
+### Changed
+
+- Fuel-save and push targets are not offered. They depend on how much lap time a
+  deliberate lift costs, and nobody in the shared data lifts on purpose, so there
+  is nothing to measure it against. The app says that instead of inventing it.
+-->
+
+## 0.99.8 — 2026-09-14
+
+### Added
+
+- **Tick boxes for whose line is on the map.** Beside *Pace | Inputs*, a box
+  each for your line and theirs, in their own colours: take either off when
+  the two run together and you want to read one of them. Nothing is unloaded
+  — the charts, the delta, the readout and the braking strip still have both
+  laps — and the last box on stays on.
+
+### Changed
+
+- **The two lines on the Review map read as two lines.** The comparison lap
+  was drawn dashed to tell it from yours — but the dashes were a dark stroke
+  laid *over* the pedal colours, and each line's outline was painted over the
+  other line's colours wherever they ran together, which whole-lap is
+  everywhere. Now the dashes carry the pedal colours themselves, every
+  outline goes down before any colour does, and whole-lap — where two lines a
+  car's width apart are the same line on the screen — they share one dark
+  casing instead of fighting each other with a cyan and a violet one. A pedal
+  that flickers for a few metres is no longer painted as specks the width of
+  the road, so what you see at a glance is zones: braking here, back on it
+  there.
+
+- **The map is dragged, not re-framed.** Grabbing the road used to re-fit the
+  view to a new stretch of it on every mouse move: the picture rescaled and
+  re-centred continuously, only movement along the road's direction did
+  anything, and each frame re-projected the whole circuit. Now the plan is
+  held still and the picture slides — the piece of road under the pointer
+  stays under the pointer, in both directions, at one frame per screen
+  refresh — and the map re-frames once, when you let go. The wheel zooms
+  about the road under the pointer too, by as much as the notch you turned,
+  instead of always about the middle of the window.
+
 
 ## 0.99.7 — 2026-09-14
 
