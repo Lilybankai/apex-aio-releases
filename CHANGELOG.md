@@ -32,6 +32,19 @@
   is nothing to measure it against. The app says that instead of inventing it.
 -->
 
+## 0.99.9 — 2026-09-14
+
+### Changed
+
+- **The two lines on the map are weighted, not patterned.** Yours is the wider
+  of the two and the other driver's is finer, and once you are zoomed into a
+  corner each carries a thread of its own colour — cyan, violet — down the
+  middle, so two laps driven half a metre apart still read as two lines rather
+  than as one. The dashes are gone: a dash always costs a line some of the
+  pedal colour it is drawn to show, and weight does the same job for nothing.
+  **D | E | F** beside the tick boxes tries three ways of splitting the two
+  weights; say which reads best on a real lap and the other two come out.
+
 ## 0.99.8 — 2026-09-14
 
 ### Added
