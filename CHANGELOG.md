@@ -3,8 +3,32 @@
 <!-- Unreleased — move under the next version heading when it is cut. The
      parser only reads "## x.y.z" headings, so nothing below is shown in the
      app until it is renamed.
+-->
+
+## 0.99.10 — 2026-09-15
 
 ### Added
+
+- **The leaderboards know the difference between a dry lap and a wet one.**
+  Every board is now three: **Dry**, **Damp** and **Wet**, and a lap is filed by
+  how wet the circuit actually was when it was driven — the wettest point on it,
+  at any moment during the lap, so a shower that arrives at half distance counts
+  even if the track has dried by the line. The Damp board is the one in the
+  middle on purpose: a dry racing line with standing water either side of it is
+  neither of the other two, and the times prove it.
+
+  Before this, a wet lap never reached the board at all. Your entry only moved
+  when a lap **beat** it, and a wet lap is slower, so a soaked afternoon left
+  nothing behind however well you drove it. Now it has its own board, its own
+  P1, and its own gaps. The chips appear on a track only once there are laps on
+  those surfaces, so a circuit nobody has driven in the rain looks exactly as it
+  did.
+
+  Two things the wet boards deliberately do not do. They are not scored against
+  the reference times, because those are all dry laps and the percentage would
+  be measuring the weather rather than the driver. And **Compare** stays on the
+  dry board, because the app keeps one driving trace per driver per circuit —
+  the wet rows show times and gaps, not telemetry.
 
 - **The Fuel tab plans on measured pit stops.** The refuelling rate it used was
   an estimate — and it was about 60% too fast. Every clean fuel-only race stop
@@ -27,10 +51,19 @@
 
 ### Changed
 
+- Laps set in the rain no longer drag your pace percentages down. The Pace card
+  and "your week" both grade laps against reference times that are dry, so a wet
+  lap now says which surface it was set on instead of being marked against a
+  benchmark nobody set in those conditions.
+
+- Board laps from before this release stay on the dry board and are marked
+  **WET?** where they were set in the wet. Those laps recorded only *that* the
+  circuit was wet, never how wet, so there is no honest way to say which of the
+  three boards they belong on — the mark says as much rather than guessing.
+
 - Fuel-save and push targets are not offered. They depend on how much lap time a
   deliberate lift costs, and nobody in the shared data lifts on purpose, so there
   is nothing to measure it against. The app says that instead of inventing it.
--->
 
 ## 0.99.9 — 2026-09-14
 
