@@ -5,6 +5,51 @@
      app until it is renamed.
 -->
 
+## 0.99.12-beta.6 — 2026-09-17
+
+### Added
+
+- **A one-minute call, and the reminder reaches you in the game.** Race
+  reminders now come at five minutes, two, and one — and the last one is the
+  one that gets you out of the menus. They also appear on the in-game overlay,
+  which is where you actually are: nine times in ten a driver registers for a
+  daily and then drops straight into a practice server, and a Windows
+  notification never reaches them there. The banner stays up longer the closer
+  the start gets. There is a switch for it beside the other two on the Schedule
+  tab, on by default.
+- **The calendar is a calendar.** The Schedule tab's Calendar view is a month
+  you can look at — pick a day and its timetable opens underneath. Each square
+  carries what actually makes one day different from another: the weekly and
+  special events by name, with team events marked, and how many races run that
+  day. The day itself states each event once with its start times beneath it,
+  rather than the several-hundred-row list it was.
+
+  It only fills in the week Le Mans Ultimate has published. Further ahead the
+  times would be right and the circuits would be invented, so those days stay
+  empty and the panel says why.
+
+### Changed
+
+- **Scrollbars match the rest of the app** wherever the panel scrolls, instead
+  of the bright grey Windows default on a near-black page.
+
+- **The new Apex AIO logo, everywhere the old one was.** The Apex & Chill mark
+  and wordmark are gone from the product: the sign-in screen, the dashboard
+  strip, the web pit wall, the corner mark on the broadcast overlay, the
+  in-game edit toolbar, the Windows app and shortcut icons, the lifecycle email
+  masthead and a partner's stream overlay all carry the Apex AIO lockup now.
+  The installer is branded too, where it previously showed a stock sidebar.
+
+  Two things it is not. The Apex & Chill Racing League keeps its own identity —
+  its website, and every mention of the league inside the app, are untouched,
+  because the league did not rename; the product did. And the overlay colour
+  tokens are unchanged: the new palette runs cyan to violet like the old one,
+  so nothing a widget draws has shifted.
+
+  Where the strip is too narrow for the full lockup — a phone holding the pit
+  wall, or the panel at its minimum width — it falls back to the symbol alone,
+  which is what the old mark-plus-text pair did by hiding the text.
+
 ## 0.99.12-beta.5 — 2026-09-17
 
 ### Added
