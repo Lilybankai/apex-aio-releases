@@ -5,6 +5,37 @@
      app until it is renamed.
 -->
 
+## 0.99.12-beta.14 — 2026-09-17
+
+### Added
+
+- **Ask to become a partner, from inside the app.** Anyone without a partner
+  code now has a **Become a partner** card in Settings → Account: stream, run a
+  league or have an audience anywhere, and you can put your hand up for a code
+  of your own. Until now the only way to get one was to know to ask — the card
+  that shows a partner their link is hidden for everybody else, so the whole
+  thing was invisible to exactly the people it is for.
+
+  The form says up front what this is: the 10% goes to *your* audience, and
+  there is no commission or payout to you. It is something worth having to put
+  on a stream, not an earner. Better said before you apply than discovered a
+  month after you have promoted it.
+
+  You can have one application open at a time, and if we turn one down you will
+  see why, in our own words, and when you can try again.
+
+- **Approving one is a single click, and it emails them.** League staff get an
+  **Applications** queue at the top of Admin → Referrals — who applied, where
+  they would use it, whether they subscribe themselves, and what they asked for.
+  Approve issues the code, links it to their account so their link and their
+  numbers appear in their own Settings, closes the application and emails them
+  their code and their stream overlay. Declining emails nobody; the reason you
+  type is shown to them in the app instead.
+
+  The state of that email sits on the row — *emailed*, *email queued* or
+  *EMAIL FAILED* — because an approved partner who was never told is the one
+  failure this could otherwise hide.
+
 ## 0.99.12-beta.13 — 2026-09-17
 
 ### Fixed
