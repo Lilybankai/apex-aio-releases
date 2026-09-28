@@ -7,51 +7,14 @@
 
 ## Unreleased
 
-## 1.2.0-beta.2 — 2026-09-28
+## 1.1.2 — 2026-09-28
 
-Every VR widget on its own panel, placed and angled wherever you want it.
-
-### Added
-
-- **VR: every widget is its own panel, placed where you want it.** The speedo
-  and relative are no longer stuck side by side: each widget in the headset
-  has its own position, size and angle. Switch widgets in and out from the
-  list on the VR card — standings, delta, radar, fuel, tyres, track map,
-  pedals, weather and more — then pick one under **Adjust** to place it.
-- **VR: tilt, turn and roll.** Lean a panel back, swing it round or rotate it
-  in its own plane, a degree at a time, all the way round.
-- **VR: opacity per panel.** SteamVR always draws panels over the game —
-  your hands on the wheel included — so a panel that has to sit over the
-  wheel can now be faded until your hands show through.
-
-### Changed
-
-- **VR placement moves in centimetres and degrees, with − and + buttons.**
-  The sliders went in 5 cm steps, too coarse to line a panel up; every
-  control now has a button either side that moves it one step at a time.
-- **Sharper text in the headset.** Panels are drawn at twice the resolution
-  and scaled down in the headset, which is how fpsVR keeps its text crisp —
-  the relative in particular was softer than it should have been.
-
-## 1.2.0-beta.1 — 2026-09-28
-
-Your overlays inside a VR headset, and Discord messages for every personal
-best.
+Your league's Discord now hears about every personal best, with the reference
+pace beside it; OBS overlays can hide themselves when you are not driving; and
+the speedo follows the car you are watching from the garage.
 
 ### Added
 
-- **Overlays in your VR headset (beta).** Switch on *Show in VR headset* on
-  the home screen and the speedo and relative appear on a panel inside the
-  headset, fixed in place in front of you — they stay put when you look
-  around, like a gauge on the dash, rather than following your head. Move it
-  closer, lower, to one side or make it bigger with the sliders on the same
-  card; it moves live, so you can set it up with the headset on. It needs
-  SteamVR: start Le Mans Ultimate with the **SteamVR** launch option. The app
-  draws the panel from its own window the same way fpsVR does, so nothing
-  touches the game and anti-cheat has nothing to see. It waits quietly for
-  SteamVR and never starts it for you, and with the switch off none of it
-  runs at all. This first beta has the speedo and relative only; choosing the
-  widgets and adding more panels comes next.
 - **Discord: every personal best, not just the records.** When a member of
   your community improves their time, the channel now says where it puts them
   on the leaderboard ("climbs from P7 to P4 of 12"), how much they found, and
@@ -62,6 +25,23 @@ best.
   now show the same band and percentage as the Reference Pace widget, e.g.
   "Good · 101.3% of reference (+1.810s)", credited to Ohne Speed's LMU
   laptimes sheet. Dry laps at rated tracks only, as in the widget.
+- **Auto hide for OBS overlays.** A new **Auto hide in OBS too** switch, next
+  to "Auto show & hide" on the Dashboard, makes your OBS Browser Sources fade
+  out on the sim's menus, garage and setup screens and between sessions, and
+  fade back in when you're driving — the same rule the in-game overlays
+  follow. It works without "Show in game", and sources already in OBS pick it
+  up within a second. Off by default. To keep one source always visible
+  (a standings board on a "starting soon" scene, say), add `?autohide=0` to
+  its URL; `?autohide=1` hides that one source even with the switch off.
+
+### Fixed
+
+- **Speedo and pedal traces followed your parked car instead of the one on
+  screen.** Watching a teammate's stint from the garage, with a car of your
+  own sitting in the stall, the overlays read that parked car: a speedo at
+  zero and flat traces under a car plainly lapping. They now follow the
+  camera car whenever your own is in the garage stall. The moment you roll
+  out, the camera is on you and nothing changes on the driving side.
 
 ## 1.1.1 — 2026-09-23
 
