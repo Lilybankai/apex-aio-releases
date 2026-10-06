@@ -6,6 +6,58 @@
 
 -->
 
+## 1.3.4-beta.2 — 2026-10-06
+
+### Added
+
+- **Compare TC, ABS and steering against anyone's lap in Review.** When you
+  compare two laps, a new TC / ABS chart under the throttle and brake shows
+  where each of you had the aids working and how hard, with theirs dashed.
+  The steering chart now shows their lap too, in degrees of wheel angle. As
+  you move along the lap, the readout gives both drivers' TC, ABS and
+  steering, e.g. "R 42°" against their "R 38°". Two small steering wheels
+  turn to show your hands and theirs at that point of the track.
+- Only laps driven on 1.3.4-beta.1 or later have proper TC and ABS data.
+  Older laps show "not recorded" rather than the old readings, which were
+  really gear shifts. Steering shows as a percentage of lock when either lap
+  is older than this release.
+- **Reset position, on every overlay.** Each overlay on the Overlays screen
+  now has a Reset position button under its switches. If an overlay has gone
+  off your screen — you unplugged a monitor, changed your resolution or your
+  Windows display scaling — click it and that overlay jumps to the middle of
+  your main screen, ready to drag wherever you want it. Only that one overlay
+  moves; the rest of your layout stays put. It works with the overlay switched
+  off too: it will be in the middle the next time you turn it on.
+
+### Fixed
+
+- **GT3 pit stops are no longer priced at twice their length.** The Team
+  tab's strategy card and the Fuel tab worked out GT3 refuelling time from
+  litres per second spread over the 120 L fuel tank. A full Virtual Energy
+  tank is only about 82 L of fuel, so a 70% fill came out at about 55 s when
+  it really takes about 28 s. Refuels are now timed from the energy that
+  actually went in, measured across 48 stops by our drivers (2.5% a second,
+  plus under a second to start and stop the fuel).
+- **"Pit window open" for a lapped car.** In a multiclass race the
+  engineer was comparing your fuel window with the overall leader's lap.
+  If the Hypercars had lapped you, you could be told the window was open
+  laps early, or for the rest of the race. It now counts your own laps.
+
+### Changed
+
+- **Pit lane time per circuit.** Where enough race stops have been
+  recorded, the Fuel tab and the Team tab now use that circuit's real pit
+  lane time instead of a flat 25 s. Measured so far: Silverstone 24 s, COTA and Monza 28 s,
+  Algarve 34 s, Road Atlanta and Le Mans 35 s, Long Beach 44 s, Daytona
+  50 s. Hover the source note to see the range. Other circuits keep the
+  25 s estimate until there are enough stops.
+- **GT3 tyre change time is measured: about 12 s, not the 30 s guess.**
+  It is used on the Fuel tab and the Team tab. Other classes keep 30 s
+  until there are enough tyre stops.
+- **The strategy figures are refreshed** from the latest data: 13,199 laps
+  and 3,629 stops. The Team tab now says which parts of the pit time are
+  measured and which are still estimates.
+
 ## 1.3.4-beta.1 — 2026-10-06
 
 ### Added
