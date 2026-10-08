@@ -5,11 +5,100 @@
      app until it is renamed.
 -->
 
+## 1.3.6-beta.2 — 2026-10-08
+
+### Added
+
+- **Practice Review: a debrief every time you leave practice.** Leave a
+  practice or test-day session with a timed lap and "Practice review ready"
+  comes up on screen. The new **Practice** tab then opens on it. Every lap is
+  measured against the lap you were chasing in Training, or your own best if
+  you weren't chasing one. You get:
+  - your best lap, your theoretical best (your best corners added up) and how
+    consistent you were;
+  - **Where the time went**: the three corners that cost you most, what you
+    did there ("braking 22 m early", "9 km/h down at the apex") and what to try;
+  - a table of every lap against the target, and a corner-by-lap grid that
+    shows where each lap lost and gained.
+
+  The Practice tab lists every practice session, not just the latest, so you
+  can go back to any of them.
+
+- **Study any lap, corner by corner.** Click a lap in the Practice tab for its
+  full telemetry against the target: the map, speed, throttle and brake, gear,
+  steering and the time gap. Underneath is a table of every corner with the
+  time it cost, your braking point, your apex and exit speed, and how far you
+  were off the target's line. Click a corner and the map and every chart zoom
+  to it.
+
+- **An accuracy score for every lap.** 0–100 per corner and per lap, from four
+  things compared with the lap you chased: your braking, your throttle, your
+  line and your speed through the corner. It was tuned on real laps so that a
+  higher score means a faster lap, not just a tidier one. The Practice tab
+  shows the score for each lap, the corners where you have the most points to
+  find, and how your score has moved session by session at that track.
+
+- **Two new training widgets.** **Coach** shows your pedals, speed, gear and
+  steering against the reference right now, with the last few seconds of
+  inputs. **Brake Cue** is a red BRAKE light that comes on as you reach the
+  reference's braking point, with the metres left. Switch them on in the
+  Training tab.
+
+### Changed
+
+- **The training overlays have a new look.** No more title bars on every
+  widget: each one is a clean dark card with one big number, red for time lost
+  and green for time gained, and the lap you're chasing drawn as a dotted line
+  against your solid one.
+  - **Trace is now Telemetry**: throttle, brake, speed and the gap by distance,
+    with the reference carrying on past your car so you see the next braking
+    zone coming.
+  - **Corner Card is now Corner Analysis**: the corner and its time big, your
+    speed through it against the reference, and a tip.
+  - **Lap Strip** shows your sector times as well as the gaps.
+  - **Ghost HUD** loses its box: the racing line glows, braking points and
+    apexes are marked on the road, and the ghost and you are arrows.
+
+  Telemetry and Corner Analysis are bigger than before, so if you set your own
+  layout you may want to move them (Edit training layout, or Reset).
+
+### Fixed
+
+- **The training overlays flickered constantly in LMU.** About one frame in
+  four arrived without the ghost, and every training widget blanked and
+  redrew for it. LMU often sends the same moment twice; those repeats now keep
+  the ghost.
+
 ## 1.3.6-beta.1 — 2026-10-08
 
 Everything from the 1.3.5 betas (Ghost HUD and Training) is still here. If your
 app moved you onto the 1.3.5 stable release for a few minutes today, this build
 puts them back.
+
+### Added
+
+- **Mature radio: the engineer can swear at you now.** A new setting on the
+  Engineer tab, off by default. **Banter** gives you a bit of mild swearing and
+  takes the mick when you make contact, cut the track, get a lap deleted, pick
+  up a penalty or lose a place. **Savage** is strong language with no mercy,
+  F-words included.
+
+  The roast always comes with the facts. You still hear how bad the damage is,
+  how long a repair takes, what a cut cost, which penalty you got and what
+  position you are now in. Flags, yellows, "box this lap", blue flags and every
+  other call stay exactly as they were, and if you have said "keep quiet" the
+  engineer goes back to clean language for anything that still gets through.
+  Questions you ask on the radio get the same attitude when the setting is on.
+
+- **The engineer tells you what a track-limits cut cost.** In a race, when the
+  stewards charge you for a cut, the engineer says how much it was and where
+  your total stands against the session's allowance: "Track limits — a quarter
+  point. That's 2.25 of 5." Within a point of the drive-through it warns you
+  that one more is a penalty. It's on the Essential radio setting, and it waits
+  for a straight like other calls. Practice and qualifying are unchanged:
+  there a cut deletes the lap, and the engineer already says so.
+
+## 1.3.5 — 2026-10-08
 
 ### Added
 
