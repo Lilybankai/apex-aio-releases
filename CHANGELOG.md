@@ -5,6 +5,18 @@
      app until it is renamed.
 -->
 
+## 1.3.17-beta.1 — 2026-11-26
+
+The beta picks up the 1.3.16 team-code fix. Everything else on beta,
+iRacing included, carries on unchanged.
+
+### Fixed
+
+- **You can type a team code after leaving a team.** After you left a team,
+  the "Join with a code" box ignored your typing until you refreshed the
+  app. It now works straight away, and so does joining another Discord
+  community after leaving one.
+
 ## 1.3.16 — 2026-11-26
 
 Joining a new team works straight after leaving one.
@@ -15,6 +27,255 @@ Joining a new team works straight after leaving one.
   the "Join with a code" box ignored your typing until you refreshed the
   app. It now works straight away. The same fix covers leaving a Discord
   community and then joining another one.
+
+## 1.3.16-beta.8 — 2026-11-10
+
+Live standings in iRacing races.
+
+### Changed
+
+- **iRacing standings now update the moment a car is passed.** iRacing only
+  re-scores positions and gaps as each car crosses the start/finish line, so
+  a pass mid-lap used to sit unshown until the line. In races the order and
+  gaps now come from where every car is on track, 15 times a second, and the
+  gaps tick live too — class gaps included in multi-class races. The
+  projected iRating change follows the live position. Before the green, under
+  a full-course caution and for cars that have taken the chequered flag,
+  iRacing's official order still applies. Practice and qualifying are
+  unchanged.
+
+## 1.3.16-beta.7 — 2026-11-10
+
+An iRacing demo, and the iRacing Pit panel when you need it.
+
+### Added
+
+- **The demo looks like iRacing in iRacing mode.** Demo mode (and iRacing
+  mode while iRacing isn't running) now shows the iRacing overlays: GTP,
+  LMP2, LMP3 and GT3 classes, iRatings, licences and the projected iRating
+  change, incidents on the Incidents panel, and iRacing's damage and pit
+  panels. The LMU demo is unchanged.
+
+- **The iRacing Pit panel comes up by itself in the pits.** By default it
+  stays out of the way on track and appears on pit road, in your pit box and
+  through the stop. Choose **Always shown** on its card in **Overlays** to
+  keep it up.
+
+- **New iRacing pit bindings** in **Settings → Controls**: **Show / hide
+  iRacing Pit panel** (brings it up anywhere, press again to go back to
+  automatic), each tyre on or off, and tyre pressures up or down by 1 psi,
+  all four or one at a time. The pit command bindings need **iRacing pit
+  commands (beta)** switched on in Settings; the show / hide binding does not.
+
+### Fixed
+
+- **The Track Limits / Incidents panel in OBS** no longer has a red block
+  stuck over it. The in-game overlay was not affected.
+
+## 1.3.16-beta.6 — 2026-11-10
+
+The race engineer, lap telemetry, the pit wall and the race log come to
+iRacing.
+
+### Added
+
+- **The race engineer on iRacing.** The Engineer tab now works in iRacing
+  mode: gaps, fuel, positions, blue flags, traffic and rival stops, plus
+  iRacing's own calls:
+  - **Qualifying:** "Out lap, then two timed laps", "Last lap of
+    qualifying, make it count", "That's your run, provisionally P2".
+  - **Race:** green flag, white flag and last lap, the chequered flag with
+    your result.
+  - **Incidents:** "Plus four, contact, 12 of 17", a warning when you are
+    one away from the limit, and the DQ.
+  - **Flags:** meatball (box this lap), black flag (serve your penalty) and
+    when it clears, local yellows, tows.
+  - **Cautions:** pace car out, pits open or closed, one to green, the
+    restart, and no position calls while it is out.
+  - Race reminders speak in iRacing mode too.
+
+- **Lap telemetry on iRacing.** Every lap is recorded, so the Pace Delta
+  overlay, the predicted lap and the speedo's projected lap now work, and
+  Review shows lap detail and Compare for iRacing laps, with your driven
+  line on the map. iRacing leaderboard laps upload with their telemetry, so
+  Compare works on the iRacing boards.
+
+- **Damage on iRacing.** The Damage overlay shows when iRacing says you
+  need a repair (optional or mandatory), the meatball flag, fast repairs
+  left, the tow countdown and your last hit. During a stop it shows the
+  stop clock and which service items are still to do.
+
+- **Race Control on iRacing.** Start lights, green, local yellows,
+  cautions, white, chequered, blue, black, meatball and DQ banners, and the
+  pit limiter.
+
+- **iRacing pit menu (beta, off by default).** A new iRacing Pit overlay
+  in the same style as the LMU pit menu: fuel, fuel to finish, all or no
+  tyres, each tyre and its pressure, tear-off, fast repair and clear, plus
+  the live stop. Turn on **iRacing pit commands (beta)** in Settings to let
+  it change iRacing's pit menu; with it off the panel only shows.
+
+- **Fuel per lap before your first lap.** iRacing's own fuel history for
+  the car and track gives a figure straight away.
+
+- **Race log for iRacing.** Review → Race log shows your iRacing races:
+  grid, finish, laps, best lap, the results table and your incidents.
+
+### Fixed
+
+- **The VR tab in iRacing mode** lists only the widgets iRacing has, and
+  its instructions describe iRacing.
+- **LMU reference pace** no longer scores iRacing sessions in Review.
+
+### Good to know
+
+- **Team relay for iRacing team races** is in but not yet tested on a real
+  team race.
+- **The engineer's caution calls** are built from iRacing's documentation
+  and have not met a real caution yet.
+
+## 1.3.16-beta.5 — 2026-11-10
+
+iRacing: incident points, auto show/hide, and the standings in Apex colours.
+
+### Added
+
+- **Incidents on iRacing.** The Track Limits overlay now works on iRacing
+  as an incident counter: your incidents against the session's limit (for
+  example 12x / 17x), your recent incidents, and what each was for when it
+  lands (+1x off track, +2x loss of control, +4x contact). A lap with an
+  incident is marked NOT CLEAN. iRacing only publishes your own count, not
+  other drivers'.
+
+### Fixed
+
+- **Auto show/hide works on iRacing.** The overlays now hide when you are
+  out of the car (garage screen, spectating) and come back when you drive.
+  Before, they stayed up whenever you were out of the car.
+
+- **iRacing tyre temperatures are labelled as pit readings.** iRacing only
+  updates tyre temperatures and wear while you are in your pit stall, so the
+  tyres overlay now says "PIT READING" and how long ago, instead of looking
+  frozen.
+
+### Changed
+
+- **iRating and licences in Apex colours.** Licence badges are now dark
+  chips with the licence letter in Apex blue to purple, instead of iRacing's
+  red, orange, yellow, green and blue. The projected iRating change is plain
+  green or red text, like the position change column.
+
+## 1.3.16-beta.4 — 2026-11-10
+
+Fixes iRacing mode in 1.3.16-beta.3.
+
+### Fixed
+
+- **Apex no longer closes when you choose iRacing.** In 1.3.16-beta.3 the
+  app shut down as soon as iRacing was picked on the sim chooser. iRacing
+  mode now opens as it should.
+
+- **No iRating ± for Rookie-licence drivers.** iRacing does not change a
+  Rookie's iRating, so the standings no longer show them a projected gain
+  or loss. They still count towards everyone else's numbers, which matched
+  iRacing's real results within a few points in the first race we checked.
+
+## 1.3.16-beta.3 — 2026-11-10
+
+iRacing support. Pick your sim when Apex opens, and iRacing gets the same
+overlays as LMU, with iRating in the standings and its own leaderboards.
+
+### Added
+
+- **Choose your sim.** When Apex opens it asks which sim you are driving:
+  Le Mans Ultimate or iRacing. Tick **Remember my choice** to skip the
+  question next time. Switch at any time from the sim chip beside the logo
+  at the top of the app.
+
+- **iRacing overlays.** Standings, relative, track map, radar, fuel, delta,
+  pedals, speedo, tyres and weather all run on iRacing and look exactly as
+  they do in LMU.
+
+- **iRating in the standings.** Every driver's iRating and licence, and in
+  races what each driver would gain or lose if the race finished in the
+  current order, worked out per class the way iRacing does it. The
+  relative shows iRating and licence too. Each can be switched off on the
+  standings and relative cards in **Overlays**.
+
+- **iRacing leaderboards.** A Leaderboard tab of its own for iRacing: the
+  league's best clean iRacing laps per track, class and conditions, kept
+  completely apart from the LMU boards.
+
+### Good to know
+
+- **The iRacing track map draws after your first clean lap.** iRacing does
+  not publish where cars are on the circuit, so Apex learns the shape from
+  your own lap and remembers it for next time.
+
+- **The iRacing radar** shows cars alongside from iRacing's own spotter, so
+  it is less detailed than LMU's.
+
+- **iRacing tyre temperatures and wear** only update when you are in the
+  pits, because that is when iRacing publishes them.
+
+- **LMU-only features are hidden in iRacing mode** for now: the engineer,
+  setups, fuel planner, training, practice, schedule and the LMU-only
+  overlays. The Team pit wall does not carry iRacing cars yet.
+
+## 1.3.16-beta.2 — 2026-11-04
+
+The live coach works on several corners at once, tells you about each one
+as you drive up to it, and debriefs you properly when you come in.
+
+### Changed
+
+- **Up to three corners at a time.** The live coach now keeps a list of
+  the corners costing you most and works on them together. When one is
+  sorted, the next joins the list.
+
+- **A cue before each corner.** On the straight before each corner on the
+  list, the engineer gives one short cue, such as "Corner five, brake ten
+  metres later." The cue is timed to finish before the braking point, and
+  is skipped rather than said late. A corner you got right last lap gets
+  a rest.
+
+- **After each lap, what changed.** "Better through seven, three tenths
+  back. Three still: carry ten kph more mid-corner."
+
+- **A debrief when you come in.** On your in-lap the engineer sums up the
+  run: what you improved and by how much, and what is still to work on,
+  with what to change in each. Ask "how am I doing?" or "debrief me" at
+  any time to hear it. Ask "what should I work on?" for the whole list.
+
+- **More detail.** Lines now carry the numbers (metres, kph, tenths), the
+  part of the corner, and a second change when your laps agree on one.
+
+- **The Focus card** shows the next corner on the list that you are
+  heading for, the others as small chips, and a row of the corners you
+  have already improved. It is also a little more compact.
+
+- **New settings** under **Engineer → Live practice coach**: corner cues
+  on or off, and how many corners to work on (1 to 3).
+
+## 1.3.16-beta.1 — 2026-11-03
+
+One set of overlays at a time, and Reference Pace on the training layer.
+
+### Changed
+
+- **Training and race overlays no longer mix.** While Training mode is
+  running in a practice session or test day, the race overlays step aside
+  and only the training ones show. In Race mode only the race overlays
+  show: the Focus card now needs Training mode too (the coach still talks
+  on the radio in Race mode).
+
+- **The Ghost HUD credit line is gone** from the Training tab.
+
+### Added
+
+- **Reference Pace for training.** Switch it on in the Training tab to see
+  your best lap against the class benchmark, Alien to Offline, on the
+  training layer. Times by Ohne Speed.
 
 ## 1.3.15 — 2026-11-03
 
